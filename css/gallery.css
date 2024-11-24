@@ -28,8 +28,10 @@
     width: 100%;
     padding: 1rem;
     gap: 2rem;
-    height: 100vh;
+    height: auto; /* Adjusts to content height */
+    margin-bottom: 2rem; /* Adds spacing below */
 }
+
 
 .triangle {
     position: absolute; 
@@ -68,8 +70,9 @@
     gap: 2rem;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: auto; /* Allows content to determine height */
 }
+
 
 .bot-left {
     display: flex;
@@ -116,7 +119,7 @@
 }
 
 .card-desc p {
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .enroll a {
