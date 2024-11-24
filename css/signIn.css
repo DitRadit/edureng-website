@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat Bold';
+    src: url(fonts/Montserrat-Bold.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+}
+
+#signInContainer {
+    border: 0px solid red;
+}
+
+#loginTitle {
+    font-family: 'Montserrat Bold';
+}
+
+label {
+    font-family: 'Montserrat Bold';
+}
+
+input {
+    box-shadow: 0px 2px 2px rgb(183, 183, 183);
+    outline: none;
+}

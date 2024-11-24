@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat Bold';
+    src: url(fonts/Montserrat-Bold.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+}
+
+#contactUsTitle {
+    font-family: 'Montserrat Bold';
+}
+
+#contactUsP {
+    max-width: 768px;
+}
+
+#socialsContainer {
+    max-width: 600px;
+    box-shadow: 0px 4px 4px rgb(183, 183, 183)
+}
+
+#feedbackTitle {
+    font-family: 'Montserrat Bold';
+}
+
+label {
+    font-family: 'Montserrat Bold';
+}
+
+#inputstuff {
+    box-shadow: 0px 2px 2px rgb(183, 183, 183);
+    outline: none;
+}
+
+#findUsTitle {
+    font-family: 'Montserrat Bold';
+}
+
+iframe {
+    max-width: 996px;
+}
+

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education IT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+    
+</head>
+<body>
+    <header class="flex flex-col rounded-none">
+        <nav id="navbar" class="flex items-center justify-between px-10 py-4 w-full max-md:px-5 relative shadow bg-transparent transition-all duration-300 ease-in-out">
+         
+          <h1 class="text-3xl text-black font-extrabold">EduReng</h1>
+          
+         
+          <div class="hidden md:flex justify-center flex-1">
+            <ul class="flex gap-8 text-center text-black font-bold">
+              <li><a href="./index.html" class="hover:text-blue-600 focus:outline-none transition-all duration-200">Home</a></li>
+              <li><a href="./pages/aboutUs.html" class="hover:text-blue-600 focus:outline-none transition-all duration-200">About Us</a></li>
+              <li><a href="./pages/contactUs.html" class="hover:text-blue-600 focus:outline-none transition-all duration-200">Contact Us</a></li>
+              <li><a href="./pages/gallery.html" class="hover:text-blue-600 focus:outline-none transition-all duration-200">Courses</a></li>
+            </ul>
+          </div>
+      
+         
+          <a href="../pages/signIn.html" id="authButton" class="hidden md:block px-10 py-3 text-center font-extrabold text-white whitespace-nowrap rounded-xl bg-blue-500 hover:bg-white hover:text-black outline outline-2 hover:outline-blue-500 duration-150">
+            Login
+          </a>
+      
+          
+          <button 
+            id="hamburger" 
+            class="block md:hidden text-black focus:outline-none"
+            aria-label="Toggle menu">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+      
+      
+          <div id="menu" class="hidden flex-col md:hidden items-center gap-8 bg-white absolute top-full left-0 w-full z-10 px-5 py-4 font-bold">
+            <ul class="flex flex-col items-center gap-4">
+              <li><a href="./index.html" class="hover:text-blue-600 focus:outline-none block transition-all duration-200">Home</a></li>
+              <li><a href="./pages/aboutUs.html" class="hover:text-blue-600 focus:outline-none block transition-all duration-200">About Us</a></li>
+              <li><a href="./pages/contactUs.html" class="hover:text-blue-600 focus:outline-none block transition-all duration-200">Contact Us</a></li>
+              <li><a href="./pages/gallery.html" class="hover:text-blue-600 focus:outline-none block transition-all duration-200">Courses</a></li>
+            </ul>
+            <a href="./pages/signIn.html" id="authButtonMobile" class="block w-full mt-2 px-10 py-3 text-center text-white whitespace-nowrap rounded-xl bg-blue-500 hover:bg-white hover:text-black outline outline-2 hover:outline-blue-500 duration-150">
+              Login
+            </a>
+          </div>
+        </nav>
+      </header>
+    <section class="flex flex-col rounded-none" aria-labelledby="hero-heading">
+        <div class="pl-20 w-full mb-2 bg-neutral-100 max-md:pl-5 max-md:max-w-full">
+            <div class="flex gap-5 max-md:flex-col">
+                <div class="flex flex-col w-[34%] max-md:ml-0 max-md:w-full">
+                    <article class="flex flex-col self-stretch my-auto w-full font-extrabold max-md:mt-10 max-md:max-w-full" data-aos="fade-right">
+                        <h1 id="hero-heading" class="mr-6 text-6xl text-black max-md:mr-2.5 max-md:text-4xl">
+                            Best IT
+                            <br />
+                            Courses for a Beginner
+                        </h1>
+                        <p class="mt-8 text-l text-zinc-500 max-md:max-w-full">
+                          Discover the top beginner-friendly IT courses to kickstart your tech journey in 2024!
+                        </p>
+                        <nav class="flex gap-5 self-start mt-7 text-xl text-center whitespace-nowrap">
+                            <a href="./pages/signUp.html" 
+                            class="px-12 py-5 text-white bg-blue-500 rounded-lg max-md:px-5 hover:bg-black hover:outline hover:outline-2 hover:outline-blue-500 hover:text-white transition duration-300" 
+                            type="button">
+                            Register
+                            </a>
+                            <a href="./pages/gallery.html" 
+                            class="px-12 py-5 bg-white rounded-lg border border-solid border-black border-opacity-20 text-zinc-500 max-md:px-5 hover:bg-black hover:outline hover:outline-2 hover:outline-blue-500 hover:text-white transition duration-300" 
+                            type="button">
+                            Courses
+                            </a>
+                        </nav>
+                    </article>
+                </div>
+                <div class="flex flex-col ml-5 w-[66%] max-md:ml-0 max-md:w-full" data-aos="fade-left">
+                    <img loading="lazy" src="./assets/images/image 1.png" alt="IT courses illustration" class="object-contain grow w-full aspect-[1.34] max-md:mt-10 max-md:max-w-full" />
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <div class="relative">
+    <div id="socialsContainer" style="z-index: 1;" 
+    class="flex flex-col justify-center items-center p-2 w-full sm:w-4/5 md:w-3/5 lg:w-2/5 bg-white absolute -bottom-14 sm:rounded-3xl md:rounded-3xl lg:rounded-3xl left-1/2 transform -translate-x-1/2 shadow-lg">
+
+   <div class="mb-4">
+       <h2 class="text-lg sm:text-xl md:text-2xl text-gray-800 text-center">Trusted by many companies</h2>
+   </div>
+   <div class="flex justify-around items-center w-full">
+       <div id="socials">
+           <img src="./assets/images/image 2.png" data-aos="fade-left" alt="" class="w-12 sm:w-16 md:w-16 lg:w-16">
+       </div>
+       <div id="socials">
+           <img src="./assets/images/circle-g.jpg" data-aos="fade-left" alt="" class="w-12 sm:w-16 md:w-16 lg:w-16">
+       </div>
+       <div id="socials">
+           <img src="./assets/images/image 4.png" data-aos="fade-right" alt="" class="w-12 sm:w-16 md:w-16 lg:w-16">
+       </div>
+       <div id="socials">
+           <img src="./assets/images/image 5.png" data-aos="fade-right" alt="" class="w-12 sm:w-16 md:w-16 lg:w-16">
+       </div>
+   </div>
+</div>
+</div>
+<br>
+    <section class="py-16 bg-white" data-aos="fade-up">
+        <div class="container mx-auto px-5">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+            <div class="col-span-1 md:col-span-1 flex flex-col items-start mt-5 ml-2">
+                <h1 class="text-4xl text-black font-extrabold">Explore Our Available Courses</h1>
+                <p class="mt-6 mr-7 text-xs text-zinc-500 max-md:mr-2.5">
+                  Browse our diverse range of courses designed to help you learn, grow, and achieve your goals.
+                </p>
+                <button
+                  class="self-start px-10 py-3 mt-12 text-xl font-bold text-center whitespace-nowrap bg-white hover:bg-blue-500 hover:text-white transition ease-in-out duration-150 rounded-lg border border-solid border-black border-opacity-20 text-zinc-500 max-md:px-5 max-md:mt-10"
+                  tabindex="0">
+                  Courses
+                </button>
+              </div>          
+
+             <a href="./pages/detail1.html">
+            <div class="col-span-1 h-64 m-5">
+                <div class="w-full h-full bg-gray-100 overflow-hidden rounded-md transition-transform duration-300 hover:scale-105">
+                    <img 
+                      src="https://i.ytimg.com/vi/_GTMOmRrqkU/maxresdefault.jpg" 
+                      alt="Course 1" 
+                      class="w-full h-full object-cover"
+                    />
+                </div>
+            </div>
+        </a>
+ 
+            <a href="./pages/detail2.html">
+            <div class="col-span-1 h-64 m-5">
+                <div class="w-full h-full bg-gray-100 overflow-hidden rounded-md transition-transform duration-300 hover:scale-105">
+                  <img 
+                    src="https://i.ytimg.com/vi/grEKMHGYyns/maxresdefault.jpg" 
+                    alt="Course 5" 
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              </a>
+
+            <a href="">
+            <div class="col-span-1 h-64 m-5">
+                <div class="w-full h-full bg-gray-100 overflow-hidden rounded-md transition-transform duration-300 hover:scale-105">
+                  <img 
+                    src="https://i.ytimg.com/vi/yyUHQIec83I/maxresdefault.jpg" 
+                    alt="Course 5" 
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              </a>
+
+             <a href="">
+            <div class="col-span-1 h-64 m-5">
+                <div class="w-full h-full bg-gray-100 overflow-hidden rounded-md transition-transform duration-300 hover:scale-105">
+                  <img 
+                    src="https://i.ytimg.com/vi/ix9cRaBkVe0/maxresdefault.jpg" 
+                    alt="Course 5" 
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </a>
+
+             <a href="">
+            <div class="col-span-1 h-64">
+                <div class="w-full h-full bg-gray-100 overflow-hidden rounded-md transition-transform duration-300 hover:scale-105">
+                  <img 
+                    src="https://i.ytimg.com/vi/eFIBOVXilK4/maxresdefault.jpg" 
+                    alt="Course 5" 
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </a>
+              
+          </div>
+        </div>
+      </section>
+      <br>
+      <section class="flex flex-col rounded-none" aria-labelledby="course-benefits-title">
+        <div class="px-16 pt-12 pb-4  w-full bg-white max-md:px-5 max-md:max-w-full">
+          <div class="flex gap-5 max-md:flex-col">
+            <figure class="flex flex-col w-[63%] max-md:ml-0 max-md:w-full" data-aos="fade-right">
+              <img
+                loading="lazy"
+                src="./assets/images/image-4.png"
+                alt="Course benefits overview illustration"
+                class="object-contain grow w-full aspect-[1.80] max-md:mt-10 max-md:max-w-full"
+              />
+            </figure>
+            <article class="flex flex-col ml-5 w-[37%] max-md:ml-0 max-md:w-full">
+              <div class="flex flex-col mt-2.5 w-full max-md:mt-10 max-md:max-w-full">
+                <h1 id="course-benefits-title" class="ml-4 text-5xl font-extrabold text-black max-md:ml-2.5">
+                  What will you get in these courses?
+                </h1>
+                <p class="mt-8 mr-4 ml-6 text-base font-extrabold text-zinc-500 max-md:mx-2.5">
+                  Gain practical skills, expert insights, and the confidence to excel in your chosen field.
+                </p>
+                <div class="mt-10 max-md:max-w-full" data-aos="fade-left">
+                  <div class="flex gap-5 max-md:flex-col">
+                    <section class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+                      <div class="flex flex-col grow max-md:mt-10">
+                        <figure class="flex flex-col justify-center self-center px-2 py-0.5 max-w-full bg-white rounded-2xl shadow-[0px_4px_4px_rgba(0,0,0,0.25)] w-[104px]">
+                          <img
+                            loading="lazy"
+                            src="./assets/images/Attend a free online class.png"
+                            alt="Free registration icon"
+                            class="object-contain w-full aspect-[0.99]"
+                          />
+                        </figure>
+                        <p class="mt-2 text-base font-extrabold text-center text-zinc-500 max-md:mr-1">
+                          Free Register
+                          <br />
+                          and access courses
+                        </p>
+                        <figure class="flex flex-col justify-center self-center px-3 py-px mt-4 max-w-full bg-white rounded-2xl shadow-[0px_4px_4px_rgba(0,0,0,0.25)] w-[104px]">
+                          <img
+                            loading="lazy"
+                            src="./assets/images/image 23.png"
+                            alt="Easy understanding icon"
+                            class="object-contain w-full aspect-[0.85]"
+                          />
+                        </figure>
+                        <p class="mt-3.5 text-base font-extrabold text-center text-zinc-500 max-md:ml-1">
+                          Easy to understand
+                        </p>
+                      </div>
+                    </section>
+                    <section class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+                      <div class="flex flex-col grow items-center text-base font-extrabold text-center text-zinc-500 max-md:mt-10">
+                        <figure class="flex flex-col justify-center self-center px-3 py-px mt-4 max-w-full bg-white rounded-2xl shadow-[0px_4px_4px_rgba(0,0,0,0.25)] w-[104px]">
+                            <img
+                              loading="lazy"
+                              src="./assets/images/image 22.png"
+                              alt="Easy understanding icon"
+                              class="object-contain w-full aspect-[0.85]"
+                            />
+                          </figure>
+                          <p class="mt-3.5 text-base font-extrabold text-center text-zinc-500 max-md:ml-1">
+                            Free Certificate
+                          </p>
+                          <figure class="flex flex-col justify-center self-center px-3 py-px mt-4 max-w-full bg-white rounded-2xl shadow-[0px_4px_4px_rgba(0,0,0,0.25)] w-[104px]">
+                            <img
+                              loading="lazy"
+                              src="./assets/images/image 24.png"
+                              alt="Easy understanding icon"
+                              class="object-contain w-full aspect-[0.85]"
+                            />
+                          </figure>
+                          <p class="mt-3.5 text-base font-extrabold text-center text-zinc-500 max-md:ml-1">
+                            Improve Your Skills
+                          </p>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <h1 id="ourteamTitle" class="text-center text-4xl font-bold mb-8 mt-20" data-aos="fade-up">Testimonials</h1>
+<div id="teamContainer" class="flex flex-wrap justify-center gap-8 p-5 mx-auto" data-aos="fade-up">
+
+    <div id="nameCard" 
+        class="text-center flex flex-col items-center bg-white rounded-lg shadow-lg p-6 w-80 transform transition-transform hover:scale-105">
+        <img src="./assets/images/image 17.png" alt="Team Member" class="w-32 h-32 rounded-full object-cover">
+        <h2 class="text-2xl font-semibold mt-4 mb-2">Name Name</h2>
+        <p class="text-gray-600 text-sm">
+          This course made complex concepts easy to understand—I feel confident in my skills now!
+        </p>
+    </div>
+
+    <div id="nameCard" 
+        class="text-center flex flex-col items-center bg-white rounded-lg shadow-lg p-6 w-80 transform transition-transform hover:scale-105">
+        <img src="./assets/images/image 17.png" alt="Team Member" class="w-32 h-32 rounded-full object-cover">
+        <h2 class="text-2xl font-semibold mt-4 mb-2">Name Name</h2>
+        <p class="text-gray-600 text-sm">
+          This course made complex concepts easy to understand—I feel confident in my skills now!
+        </p>
+    </div>
+  
+    <div id="nameCard" 
+        class="text-center flex flex-col items-center bg-white rounded-lg shadow-lg p-6 w-80 transform transition-transform hover:scale-105">
+        <img src="./assets/images/image 17.png" alt="Team Member" class="w-32 h-32 rounded-full object-cover">
+        <h2 class="text-2xl font-semibold mt-4 mb-2">Name Name</h2>
+        <p class="text-gray-600 text-sm">
+          This course made complex concepts easy to understand—I feel confident in my skills now!
+        </p>
+    </div>
+</div>
+<footer class="bg-white py-6 mt-10">
+  <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+    <div class="mb-4 md:mb-0">
+
+    </div>
+    <div class="flex flex-col md:flex-row items-center md:space-x-8">
+      <a href="./index.html" class="py-2 text-gray-700 font-bold hover:text-gray-500">
+        Home
+      </a>
+      <a href="./pages/aboutUs.html" class="py-2 text-gray-700 font-bold hover:text-gray-500">
+        About
+      </a>
+      <a href="./pages/gallery.html" class="py-2 text-gray-700 font-bold hover:text-gray-500">
+        Courses
+      </a>
+      <a href="./pages/contactUs.html" class="py-2 text-gray-700 font-bold hover:text-gray-500">
+        Contact
+      </a>
+    </div>
+  </div>
+  <div class="mt-4 text-center text-sm text-gray-500">
+    © 2024 MahklukIreng. All rights reserved.
+  </div>
+</footer>
+
+
+</body>
+<script>
+    const hamburger = document.getElementById('hamburger');
+      const menu = document.getElementById('menu');
+    
+      hamburger.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+
+       const authButton = document.getElementById('authButton');
+      const authButtonMobile = document.getElementById('authButtonMobile');
+    
+      function updateAuthButton() {
+    const userLoggedIn = localStorage.getItem('userLoggedIn');
+
+    if (userLoggedIn === 'true') {
+        authButton.textContent = 'Logout';
+        authButton.href = './index.html';
+        authButton.classList.remove('bg-blue-500', 'hover:bg-white', 'hover:text-black', 'hover:outline-blue-500');
+        authButton.classList.add('bg-red-500', 'hover:bg-white', 'hover:text-red-500', 'hover:outline-red-500');
+        authButton.addEventListener('click', handleLogout);
+
+        authButtonMobile.textContent = 'Logout';
+        authButtonMobile.href = './index.html';
+        authButtonMobile.classList.remove('bg-blue-500', 'hover:bg-white', 'hover:text-black', 'hover:outline-blue-500');
+        authButtonMobile.classList.add('bg-red-500', 'hover:bg-white', 'hover:text-red-500', 'hover:outline-red-500');
+        authButtonMobile.addEventListener('click', handleLogout);
+    } else {
+        authButton.textContent = 'Login';
+        authButton.href = './pages/signIn.html';
+        authButton.classList.remove('bg-red-500', 'hover:bg-white', 'hover:text-red-500', 'hover:outline-red-500');
+        authButton.classList.add('bg-blue-500', 'hover:bg-white', 'hover:text-black', 'hover:outline-blue-500');
+        authButton.removeEventListener('click', handleLogout);
+
+        authButtonMobile.textContent = 'Login';
+        authButtonMobile.href = './pages/signIn.html';
+        authButtonMobile.classList.remove('bg-red-500', 'hover:bg-white', 'hover:text-red-500', 'hover:outline-red-500');
+        authButtonMobile.classList.add('bg-blue-500', 'hover:bg-white', 'hover:text-black', 'hover:outline-blue-500');
+        authButtonMobile.removeEventListener('click', handleLogout);
+    }
+}
+
+window.addEventListener('scroll', function() {
+  const navbar = document.getElementById('navbar');
+  
+
+  if (window.scrollY > 50) {
+    navbar.classList.remove('bg-transparent');
+    navbar.classList.add('bg-white');
+    navbar.classList.add('shadow-md');
+  } else {
+    navbar.classList.remove('bg-white');
+    navbar.classList.remove('shadow-md');
+    navbar.classList.add('bg-transparent');
+  }
+});
+
+    
+function handleLogout(event) {
+    event.preventDefault();
+    localStorage.removeItem('userLoggedIn');
+    updateAuthButton();
+    alert('You have been logged out!');
+
+    window.location.href = './pages/signIn.html';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateAuthButton();
+});
+
+
+const signInButton = document.querySelector('.text-center.p-2.w-32.rounded-xl.mt-8'); 
+const emailInput = document.getElementById('emailInput');
+const passwordInput = document.getElementById('passwordInput');
+
+signInButton.addEventListener('click', () => {
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
+
+   
+    const storedEmail = localStorage.getItem('userEmail');
+    const storedPassword = localStorage.getItem('userPassword');
+
+    if (email === storedEmail && password === storedPassword) {
+        localStorage.setItem('userLoggedIn', 'true'); 
+        alert('Sign in successful!');
+        window.location.href = './pages/signIn.html';
+    } else {
+        alert('Invalid email or password.');
+    }
+});
+    </script>
+    <script>
+        AOS.init({
+            duration: 1000, 
+            once: true,     
+        });
+    </script>
+</html>

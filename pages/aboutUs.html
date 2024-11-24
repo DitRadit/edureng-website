@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/aboutUs.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body>
+    <header class="flex flex-col rounded-none">
+        <nav class="flex items-center justify-between px-10 py-4 bg-white w-full max-md:px-5 relative shadow">
+    
+          <h1 class="text-3xl text-black font-extrabold">EduReng</h1>
+      
+          
+          <div class="hidden md:flex justify-center flex-1">
+            <ul class="flex gap-8 text-center text-black font-bold">
+              <li><a href="../index.html" class="hover:text-blue-600 focus:outline-none transition-all duration-200">Home</a></li>
+              <li><a href="../pages/aboutUs.html" class="hover:text-blue-600  focus:outline-none transition-all duration-200">About Us</a></li>
+              <li><a href="../pages/contactUs.html" class="hover:text-blue-600  focus:outline-none transition-all duration-200">Contact Us</a></li>
+              <li><a href="../pages/gallery.html" class="hover:text-blue-600  focus:outline-none transition-all duration-200">Courses</a></li>
+            </ul>
+          </div>
+      
+      
+          <a href="../pages/signIn.html" id="authButton" class="hidden md:block px-10 py-3 text-center font-extrabold text-white whitespace-nowrap rounded-xl bg-blue-500 hover:bg-white hover:text-black outline outline-2 hover:outline-blue-500 duration-150">
+            Login
+          </a>
+      
+ 
+          <button 
+            id="hamburger" 
+            class="block md:hidden text-black focus:outline-none"
+            aria-label="Toggle menu">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+      
+    
+          <div id="menu" class="hidden flex-col md:hidden items-center gap-8 bg-white absolute top-full left-0 w-full z-10 px-5 py-4 font-bold">
+            <ul class="flex flex-col items-center gap-4">
+              <li><a href="../index.html" class="hover:text-blue-600  focus:outline-none block transition-all duration-200">Home</a></li>
+              <li><a href="../pages/aboutUs.html" class="hover:text-blue-600  focus:outline-none block transition-all duration-200">About Us</a></li>
+              <li><a href="../pages/contactUs.html" class="hover:text-blue-600  focus:outline-none block transition-all duration-200">Contact Us</a></li>
+              <li><a href="../pages/gallery.html" class="hover:text-blue-600  focus:outline-none block transition-all duration-200">Courses</a></li>
+            </ul>
+            <a href="../pages/signIn.html" id="authButtonMobile" class="block w-full mt-2 px-10 py-3 text-center text-white whitespace-nowrap rounded-xl bg-blue-500 hover:bg-white hover:text-black outline outline-2 hover:outline-blue-500 duration-150">
+              Login
+            </a>
+          </div>
+        </nav>
+      </header>
+      <div class="bg-slate-100 relative" data-aos="fade-up">
+        <div class="text-center flex flex-col pr-2 pl-2 pt-24 pb-36 sm:pr-4 sm:pl-4 sm:pt-16 sm:pb-24 md:pr-8 md:pl-8 md:pt-24 md:pb-36 lg:p-36">
+            <h1 class="text-4xl my-6" id="title">About Us</h1>
+            <p id="aboutUsP" class="w-4/5 sm:2/3 md:2/3 lg:w-2/3 mx-auto my-auto font-bold text-gray-400">
+                We help beginners dive into web development with accessible, hands-on courses. Our goal is to provide you with the skills and confidence to start building right away. Join us to unlock your potential and explore what you can create!
+            </p>
+            <div id="amountContainer" class="flex justify-around items-center p-6 w-full sm:w-4/5 md:w-3/5 lg:w-2/5 bg-white absolute -bottom-14 sm:rounded-3xl md:rounded-3xl lg:rounded-3xl left-1/2 transform -translate-x-1/2">
+                <div id="amount">
+                    <h1 class="count text-2xl sm:text-3xl md:text-3xl lg:text-3xl">0</h1>
+                    <p class="text-gray-400">Users</p>
+                </div>
+                <div id="amount">
+                    <h1 class="count text-2xl sm:text-3xl md:text-3xl lg:text-3xl">0</h1>
+                    <p class="text-gray-400">Teachers</p>
+                </div>
+                <div id="amount">
+                    <h1 class="count text-2xl sm:text-3xl md:text-3xl lg:text-3xl">0</h1>
+                    <p class="text-gray-400">Courses</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-center items-center mt-48 mb-48 flex-col sm:flex-col md:flex-col lg:flex-row" data-aos="fade-up">
+        <div>
+            <img src="../assets/images/image 16.png" alt="" class="p-12 sm:p-12 md:p-12 lg:p-0">
+        </div>
+        <div class="flex flex-col ml-0 sm:ml-0 md:ml-0 lg:ml-32 text-center sm:text-center md:text-center lg:text-left">
+            <h1 id="whoarewe" class="text-4xl mt-6 sm:mt-6 md:mt-6 lg:mt-0 mb-4">Who are we?</h1>
+            <p id="whoareweP" class="w-64 sm:w-96 md:w-96 lg:w-96">We’re a team of developers and educators passionate about teaching web development to beginners. With a focus on practical, real-world skills, we’re here to guide you every step of the way as you start your coding journey!</p>
+        </div>
+    </div>
+    <h1 id="ourteamTitle" class="text-center text-4xl">Our Team</h1>
+    <div class="flex justify-evenly items-center p-12 flex-col sm:flex-col md:flex-col lg:flex-row mx-auto my-auto" id="teamContainer" data-aos="fade-up">
+        <div
+        class="text-center flex justify-center items-center flex-col p-8 mt-12 sm:mt-12 md:mt-12 lg:mt-0 transition-transform duration-300 hover:scale-105 hover:bg-gray-100 rounded-lg"
+        id="nameCard"
+      >
+        <img src="../assets/images/swwwwwwwwwww.png" alt="">
+        <div>
+          <h1 class="text-3xl mt-4 mb-4">Nakulla</h1>
+        </div>
+      </div>
+      
+      <div
+        class="text-center flex justify-center items-center flex-col p-8 mt-12 sm:mt-12 md:mt-12 lg:mt-0 transition-transform duration-300 hover:scale-105 hover:bg-gray-100 rounded-lg"
+        id="nameCard"
+      >
+        <div>
+          <img src="../assets/images/sssssfges-removebg-preview.png" alt="">
+        </div>
+        <div>
+          <h1 class="text-3xl mt-4 mb-4">Gus Radit</h1>
+        </div>
+      </div>
+      
+      <div
+        class="text-center flex justify-center items-center flex-col p-8 mt-12 sm:mt-12 md:mt-12 lg:mt-0 transition-transform duration-300 hover:scale-105 hover:bg-gray-100 rounded-lg"
+        id="nameCard"
+      >
+        <div>
+          <img src="../assets/images/179aa3e5-9123-48e9-bac3-a77c2d3b2f23-removebg-preview.png" alt="">
+        </div>
+        <div>
+          <h1 class="text-3xl mt-4 mb-4">Nabil</h1>
+        </div>
+      </div>
+      
+     </div>
+     <footer class="bg-white py-6 mt-10">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            
+          </div>
+          <div class="flex flex-col md:flex-row items-center md:space-x-8">
+            <a href="../index.html" class="py-2 text-gray-700 font-bold hover:text-gray-500">
+              Home
+            </a>
+            <a href="../pages/aboutUs.html" class="py-2 text-gray-700 font-bold hover:text-gray-500">
+              About
+            </a>
+            <a href="../pages/gallery.html" class="py-2 text-gray-700 font-bold hover:text-gray-500">
+              Courses
+            </a>
+            <a href="../pages/contactUs.html" class="py-2 text-gray-700 font-bold hover:text-gray-500">
+              Contact
+            </a>
+          </div>
+        </div>
+        <div class="mt-4 text-center text-sm text-gray-500">
+          © 2024 MahklukIreng. All rights reserved.
+        </div>
+      </footer>
+</body>
+<script>
+    const hamburger = document.getElementById('hamburger');
+      const menu = document.getElementById('menu');
+    
+      hamburger.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+
+       const authButton = document.getElementById('authButton');
+      const authButtonMobile = document.getElementById('authButtonMobile');
+    
+      function updateAuthButton() {
+    const userLoggedIn = localStorage.getItem('userLoggedIn');
+
+    if (userLoggedIn === 'true') {
+        authButton.textContent = 'Logout';
+        authButton.href = '../index.html';
+        authButton.classList.remove('bg-blue-500', 'hover:bg-white', 'hover:text-black', 'hover:outline-blue-500');
+        authButton.classList.add('bg-red-500', 'hover:bg-white', 'hover:text-red-500', 'hover:outline-red-500');
+        authButton.addEventListener('click', handleLogout);
+
+        authButtonMobile.textContent = 'Logout';
+        authButtonMobile.href = '../index.html';
+        authButtonMobile.classList.remove('bg-blue-500', 'hover:bg-white', 'hover:text-black', 'hover:outline-blue-500');
+        authButtonMobile.classList.add('bg-red-500', 'hover:bg-white', 'hover:text-red-500', 'hover:outline-red-500');
+        authButtonMobile.addEventListener('click', handleLogout);
+    } else {
+        authButton.textContent = 'Login';
+        authButton.href = '../pages/signIn.html';
+        authButton.classList.remove('bg-red-500', 'hover:bg-white', 'hover:text-red-500', 'hover:outline-red-500');
+        authButton.classList.add('bg-blue-500', 'hover:bg-white', 'hover:text-black', 'hover:outline-blue-500');
+        authButton.removeEventListener('click', handleLogout);
+
+        authButtonMobile.textContent = 'Login';
+        authButtonMobile.href = '../pages/signIn.html';
+        authButtonMobile.classList.remove('bg-red-500', 'hover:bg-white', 'hover:text-red-500', 'hover:outline-red-500');
+        authButtonMobile.classList.add('bg-blue-500', 'hover:bg-white', 'hover:text-black', 'hover:outline-blue-500');
+        authButtonMobile.removeEventListener('click', handleLogout);
+    }
+}
+
+    
+function handleLogout(event) {
+    event.preventDefault();
+    localStorage.removeItem('userLoggedIn');
+    updateAuthButton();
+    alert('You have been logged out!');
+  
+    window.location.href = '../pages/signIn.html';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateAuthButton();
+});
+
+      
+    </script>
+    <script>
+
+const signInButton = document.querySelector('.text-center.p-2.w-32.rounded-xl.mt-8'); 
+const emailInput = document.getElementById('emailInput');
+const passwordInput = document.getElementById('passwordInput');
+
+signInButton.addEventListener('click', () => {
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
+
+    
+    const storedEmail = localStorage.getItem('userEmail');
+    const storedPassword = localStorage.getItem('userPassword');
+
+    if (email === storedEmail && password === storedPassword) {
+        localStorage.setItem('userLoggedIn', 'true'); 
+        alert('Sign in successful!');
+        window.location.href = '../pages/signIn.html';
+    } else {
+        alert('Invalid email or password.');
+    }
+});
+    </script>
+<script>
+ 
+    function fastCount(element, target, duration) {
+        let current = 0;
+        const increment = target / (duration / 10);
+
+        const interval = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(interval);
+            }
+            element.textContent = Math.ceil(current);
+        }, 10);
+    }
+
+   
+    document.addEventListener("DOMContentLoaded", () => {
+        const counts = document.querySelectorAll(".count");
+        const targets = [190, 190, 190]; 
+
+        counts.forEach((countElement, index) => {
+            fastCount(countElement, targets[index], 2000); 
+        });
+    });
+</script>
+<script>
+    AOS.init({
+        duration: 1000, 
+        once: true,    
+    });
+</script>
+</html>

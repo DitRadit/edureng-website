@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style2.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Document</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    </head>
+    <body>
+        <aside style="z-index: 1;" class="fixed top-0 left-0 h-full w-64 bg-white shadow-md transform -translate-x-full transition-transform duration-300" id="sidebar">
+            <div class="px-6 py-4 mt-20 bg-white">
+                <div class="flex flex-col items-center mb-8">
+              
+                    <img 
+                        src="../assets/images/image 17.png" 
+                        alt="Profile Image" 
+                        class="w-24 h-30 " 
+                    />
+                </div>
+                <h1 class="text-3xl text-black font-extrabold mb-8">Education</h1>
+                <ul class="flex flex-col gap-4 text-black font-bold">
+                    <li><a href="../index.html" class="hover:text-blue-600 focus:outline-none transition-all duration-200">Home</a></li>
+                    <li><a href="./aboutUs.html" class="hover:text-blue-600 focus:outline-none transition-all duration-200">About Us</a></li>
+                    <li><a href="./contactUs.html" class="hover:text-blue-600 focus:outline-none transition-all duration-200">Contact Us</a></li>
+                    <li><a href="./gallery.html" class="hover:text-blue-600 focus:outline-none transition-all duration-200">Courses</a></li>
+                </ul>
+                <a href="./signIn.html" id="authButtonSidebar" class="block mt-8 px-10 py-3 text-center font-extrabold text-white bg-blue-600 rounded-xl hover:bg-black focus:outline-none transition-all duration-200">
+                    Login
+                </a>
+            </div>
+        </aside>  
+        <button 
+            id="hamburger" 
+            class="fixed top-4 left-4 z-50 text-black focus:outline-none"
+            aria-label="Toggle sidebar">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+        <div class="profile"></div>
+        <div class="detail-course">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VM3rwdMBORY?si=j0_buAWij7mu4hN1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="detail-desc">
+                <h1>TUTORIAL SPRING BOOT DASAR (BAHASA INDONESIA)</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus architecto
+                    recusandae non consequuntur earum officia, quos illo eveniet quo vero at veniam
+                    fuga maiores velit minima est nulla necessitatibus dignissimos!</p>
+                    <div>
+                      <a href="#" class="bg-green-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-black transition-all duration-300 ease-in-out focus:outline-none">
+                        Download Certificate
+                      </a>
+                    </div> 
+            </div>
+            
+        </div>
+    </body>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const sidebar = document.getElementById('sidebar');
+        const authButtonSidebar = document.getElementById('authButtonSidebar');
+      
+        hamburger.addEventListener('click', () => {
+          sidebar.classList.toggle('-translate-x-full'); 
+          document.body.classList.toggle('ml-48'); 
+        });
+      
+        function updateAuthButton() {
+        const userLoggedIn = localStorage.getItem('userLoggedIn');
+    
+        if (userLoggedIn === 'true') {
+            authButtonSidebar.textContent = 'Logout';
+            authButtonSidebar.href = '../index.html';
+            authButtonSidebar.classList.remove('bg-blue-500', 'hover:bg-white', 'hover:text-black', 'hover:outline-blue-500');
+            authButtonSidebar.classList.add('bg-red-500', 'hover:bg-white', 'hover:text-red-500', 'hover:outline-red-500');
+            authButtonSidebar.addEventListener('click', handleLogout);
+        } else {
+            authButtonSidebar.textContent = 'Login';
+            authButtonSidebar.href = '../pages/signIn.html';
+            authButtonSidebar.classList.remove('bg-red-500', 'hover:bg-white', 'hover:text-red-500', 'hover:outline-red-500');
+            authButtonSidebar.classList.add('bg-blue-500', 'hover:bg-white', 'hover:text-black', 'hover:outline-blue-500');
+            authButtonSidebar.removeEventListener('click', handleLogout);
+        }
+    }
+      
+    function handleLogout(event) {
+        event.preventDefault();
+        localStorage.removeItem('userLoggedIn');
+        updateAuthButton();
+        alert('You have been logged out!');
+        window.location.href = '../pages/signIn.html';
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        updateAuthButton();
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const userLoggedIn = localStorage.getItem('userLoggedIn');
+    if (userLoggedIn !== 'true') {
+        alert('You need to log in to access this page.');
+        window.location.href = '../pages/signIn.html'; 
+    } else {
+        updateAuthButton(); 
+    }
+});
+    
+    </script>
+    <script>
+    
+      const signInButton = document.querySelector('.text-center.p-2.w-32.rounded-xl.mt-8'); 
+      const emailInput = document.getElementById('emailInput');
+      const passwordInput = document.getElementById('passwordInput');
+      
+      signInButton.addEventListener('click', () => {
+          const email = emailInput.value.trim();
+          const password = passwordInput.value.trim();
+      
+         
+          const storedEmail = localStorage.getItem('userEmail');
+          const storedPassword = localStorage.getItem('userPassword');
+      
+          if (email === storedEmail && password === storedPassword) {
+              localStorage.setItem('userLoggedIn', 'true'); 
+              alert('Sign in successful!');
+              window.location.href = '../pages/signIn.html';
+          } else {
+              alert('Invalid email or password.');
+          }
+      });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const userLoggedIn = localStorage.getItem('userLoggedIn');
+        if (userLoggedIn !== 'true') {
+            alert('You need to log in to access this page.');
+            window.location.href = '../pages/signIn.html'; 
+        } else {
+            updateAuthButton(); 
+        }
+    });
+    
+   
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.card');
+    
+
+    searchInput.addEventListener('input', function () {
+        const searchTerm = searchInput.value.toLowerCase();
+    
+        cards.forEach(card => {
+            const courseTitle = card.querySelector('.card-desc p').textContent.toLowerCase();
+    
+            if (courseTitle.includes(searchTerm)) {
+                card.style.display = ''; 
+            } else {
+                card.style.display = 'none'; 
+            }
+        });
+    });
+    
+    </script>
+    <script>
+        AOS.init({
+            duration: 1000, 
+            once: true,     
+        });
+    </script>
+</html>
