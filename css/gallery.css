@@ -32,18 +32,6 @@
     margin-bottom: 2rem; /* Adds spacing below */
 }
 
-
-.triangle {
-    position: absolute; 
-    top: 0;
-    right: 0;
-    width: 83%;
-    height: 100%;
-    background-color: #E1E1E1;
-    clip-path: polygon(100% 0, 100% 100%, 0 100%);
-    z-index: -2; 
-}
-
 .top {
     display: flex;
     flex-direction: column;
